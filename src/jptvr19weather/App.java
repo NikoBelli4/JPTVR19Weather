@@ -6,6 +6,7 @@
 package jptvr19weather;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -39,8 +40,18 @@ class App {
                 tempInYear[i][j]=random.nextInt(max-min+1)+min;
                 System.out.printf("%4d",tempInYear[i][j]);
             }
-            System.out.println();
+        System.out.println();
         }
+        System.out.println();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите месяц ");
+        int month = scanner.nextInt();
+        System.out.println("Введите число ");
+        int date = scanner.nextInt();
+        System.out.println(tempInYear[month-1][date-1]);
+        System.out.println();
+            
+        
         
     }
 }
